@@ -1,6 +1,6 @@
 html {
     font-family: 'Inter';
-    font-size: 15px;
+    font-size: 14px;
     color: white;
     background-color: black;
 }
@@ -9,22 +9,48 @@ html,
 body {
     height: 100%;
     width: 100%;
-}
-
-img {
-    border-radius: 10px;
-}
-
-ul,
-ol {
-    list-style: none;
     padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
 }
 
 li {
     padding-inline-start: 0;
 }
 
+a {
+    text-decoration: underline;
+    color: lightgray;
+}
+
 a:hover {
     opacity: 0.8;
+}
+
+.prose :is(a) {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.prose :is(a):hover {
+    text-decoration: underline;
+}
+
+.prose pre {
+    white-space: pre-wrap; 
+    word-break: break-word;
+    padding: 10px 20px;
+    border-radius: 5px;
+    tab-size: 2;
+    font-size: smaller;
 }

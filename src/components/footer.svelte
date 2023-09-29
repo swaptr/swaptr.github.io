@@ -11,7 +11,6 @@
 		<div />
 		<div class="text-container">
 			<span>{new Date().getFullYear()} &copy;</span>
-			<!-- <button on:click={() => (showModal = true)}>{config.license}</button> -->
 			<TextButton
 				label={config.license}
 				onChange={() => {
@@ -57,10 +56,11 @@
 
 	p {
 		margin: 0;
+		font-size: small;
+		text-align: justify;
 	}
 
 	footer {
 		padding-block: 15px;
-		border-top: 1px solid;
 	}
 </style>

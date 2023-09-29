@@ -5,8 +5,8 @@
 <nav class="header-container">
 	<a href="/">
 		<div class="logo">
-			<img alt="s" src="favicon.ico" />
-			<b class="title">{config.title}</b>
+			<img alt="s" src="/favicon.svg" />
+			<h3 class="title">{config.title}</h3>
 		</div>
 	</a>
 
@@ -24,15 +24,16 @@
 </nav>
 
 <style>
-	.header-container {
-		font-size: 1rem;
+	ul {
+		list-style: none;
+		padding: 0;
 	}
 
 	.title {
 		visibility: hidden;
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 640px) {
 		.title {
 			visibility: visible;
 		}
@@ -47,15 +48,16 @@
 
 	img {
 		height: 28px;
-		filter: invert(1);
 	}
 
 	nav {
-		padding-block: 15px;
+		/* padding-block: 15px; */
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 2rem;
+		font-size: 1rem;
+		padding-bottom: 8px;
 	}
 
 	.links {
@@ -67,5 +69,9 @@
 	a {
 		color: inherit;
 		text-decoration: none;
+	}
+
+	a:hover {
+		opacity: 0.8;
 	}
 </style>
