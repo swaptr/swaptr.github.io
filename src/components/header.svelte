@@ -9,7 +9,6 @@
 			<h3 class="title">{config.title}</h3>
 		</div>
 	</a>
-
 	<ul class="links">
 		<li>
 			<a href="/blog">blog</a>
@@ -50,8 +49,8 @@
 		height: 28px;
 	}
 
-	nav {
-		/* padding-block: 15px; */
+	.header-container {
+		padding-block: 0.5em;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
