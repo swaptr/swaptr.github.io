@@ -35,6 +35,10 @@
 	</div>
 </article>
 
+{#if data.meta.sponsor}
+	<span class="badge">This work was sponsored by the {data.meta.sponsor}. </span>
+{/if}
+
 <style>
 	.header {
 		display: flex;
@@ -68,5 +72,16 @@
 		margin: 10px 0px;
 		text-align: justify;
 		text-justify: inter-word;
+	}
+
+	.badge {
+		color: yellow;
+		padding: 4px 8px;
+		text-align: center;
+		border: 1px solid yellow;
+		border-radius: 2px;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 </style>
