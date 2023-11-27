@@ -5,6 +5,7 @@ date: '2022-08-21'
 categories: [lightning-network]
 published: true
 image: '/images/sob.png'
+sponsor: 'Summer of Bitcoin'
 ---
 
 Hello again, today we will look into developing custom plugins for Core Lightning using the Dart programming language. Core Lightning ships with a solid and high-performant core written in the C programming language, and extended functionality is provided through plugins. [Some](https://github.com/ElementsProject/lightning/tree/master/plugins) plugins critical to the functioning of Core Lightning are shipped along, whereas there are many [community curated](https://github.com/lightningd/plugins) plugins available as well.

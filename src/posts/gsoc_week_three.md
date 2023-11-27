@@ -6,6 +6,7 @@ description: 'This blog post highlights my third week at KDE Community during th
 categories: [gsoc, kde]
 published: true
 image: '/images/gsoc.png'
+sponsor: 'Google Summer of Code'
 ---
 
 Just one of those days when you wake up and feel like "I knew there was something wrong, or something way too easy". It seemed like an average task but I was sure I was missing something.  

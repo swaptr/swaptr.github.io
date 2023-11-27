@@ -5,6 +5,7 @@ description: 'This blog post intricates my second week at KDE Community during t
 categories: [gsoc, kde]
 published: true
 image: '/images/gsoc.png'
+sponsor: 'Google Summer of Code'
 ---
 
 After few regressions and hours of fixing issues I got the headerbar and sidebar revamp MR merged so we start the week on a high and more than that we had the first official build of Kasts, yay!  

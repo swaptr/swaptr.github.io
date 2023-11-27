@@ -5,6 +5,7 @@ date: '2022-08-14'
 categories: [lightning-network]
 published: true
 image: '/images/sob.png'
+sponsor: 'Summer of Bitcoin'
 ---
 
 [lndart.cln](https://github.com/dart-lightning/lndart.cln) is a Dart framework for Core Lightning. This package is really handy if you wish to interact with your lightning node and develop some cool plugins for it. This post offers detailed guide on how you can start contributing to the lndart.cln package.

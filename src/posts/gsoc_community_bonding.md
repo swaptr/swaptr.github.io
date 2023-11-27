@@ -6,6 +6,7 @@ description: 'This blog post elaborates my experience during the community bondi
 categories: [gsoc, kde]
 published: true
 image: '/images/gsoc.png'
+sponsor: 'Google Summer of Code'
 ---
 
 Hello everyone!

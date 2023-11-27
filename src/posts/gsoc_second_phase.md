@@ -6,6 +6,7 @@ description: 'This blog post comprises of the experience of building Kasts durin
 categories: [gsoc, kde]
 published: true
 image: '/images/gsoc.png'
+sponsor: 'Google Summer of Code'
 ---
 
 Hey everyone, it's been more than a month since I last wrote. This part of my GSoC project had to do more with reading and understanding than just coding. We continue from the last where we left off, I had to start with the more challenging issue of providing android integration to Kasts and adding chapter markers. While the latter was pretty easy, the former was something I was dreading from the beginning as I have zero experience with Android programming.  

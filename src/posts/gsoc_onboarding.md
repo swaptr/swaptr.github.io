@@ -6,6 +6,7 @@ description: 'This blog post describes my onboarding at the Google Summer of Cod
 categories: [gsoc, kde]
 published: true
 image: '/images/gsoc.png'
+sponsor: 'Google Summer of Code'
 ---
 
 Hello everyone! I will be participating in the Google Summer of Code 2021. I will be working on adding podcast support to [Kasts](https://summerofcode.withgoogle.com/projects/#6682134443458560).  

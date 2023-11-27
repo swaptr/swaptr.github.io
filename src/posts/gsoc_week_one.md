@@ -6,6 +6,7 @@ description: 'This blog post sums up my first week at KDE Community during the G
 categories: [gsoc, kde]
 published: true
 image: '/images/gsoc.png'
+sponsor: 'Google Summer of Code'
 ---
 
 So last blog we finished on the kdereview thing. I remind you this because a lot of work this week would end up being related to issues raised in the kdereview.  

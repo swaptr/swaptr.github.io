@@ -35,9 +35,7 @@
 	</div>
 </article>
 
-{#if data.meta.sponsor}
-	<span class="badge">This work was sponsored by the {data.meta.sponsor}. </span>
-{/if}
+<p class="sponsor-tag">This work was sponsored by the <b>{data.meta.sponsor}</b>.</p>
 
 <style>
 	.header {
@@ -74,14 +72,10 @@
 		text-justify: inter-word;
 	}
 
-	.badge {
-		color: yellow;
-		padding: 4px 8px;
+	.sponsor-tag {
+		font-style: italic;
 		text-align: center;
-		border: 1px solid yellow;
-		border-radius: 2px;
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
+		color: rgba(255, 255, 255, 0.75);
+		margin-top: 50px;
 	}
 </style>
