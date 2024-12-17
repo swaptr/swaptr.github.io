@@ -10,3 +10,10 @@ sponsor: 'Post 1'
 
 # This is a heading #1
 ## This is a heading #2
+### This is a heading #3
+
+```js
+function hello() {
+    console.log("Hello world")
+}
+```
