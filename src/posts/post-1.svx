@@ -1,0 +1,12 @@
+---
+title: 'Post 1'
+description: 'Description of post 1'
+date: '2023-11-16'
+categories: [a,b,c]
+published: true
+image: '/images/1.png'
+sponsor: 'Post 1'
+---
+
+# This is a heading #1
+## This is a heading #2
