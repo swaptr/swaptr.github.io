@@ -18,4 +18,4 @@ function hello() {
 }
 ```
 
-![alt text](favicon.png "Title")
+![alt text](/favicon.png "Title")

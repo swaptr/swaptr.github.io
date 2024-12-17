@@ -1,9 +1,27 @@
 import * as config from '$lib/config'
 import type { Post } from '$lib/types'
 
+export const prerender = true
+
 export async function GET({ fetch }) {
-    const response = await fetch('api/posts')
-    const posts: Post[] = await response.json()
+    let posts: Post[] = []
+
+    const paths = import.meta.glob('/src/posts/*.svx', { eager: true })
+
+    for (const path in paths) {
+        const file = paths[path]
+        const slug = path.split('/').at(-1)?.replace('.svx', '')
+
+        if (file && typeof file === 'object' && 'metadata' in file && slug) {
+            const metadata = file.metadata as Omit<Post, 'slug'>
+            const post = { ...metadata, slug } satisfies Post
+            post.published && posts.push(post)
+        }
+    }
+
+    posts = posts.sort(
+        (first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
+    )
 
     const headers = { 'Content-Type': 'application/xml' }
 
@@ -21,7 +39,7 @@ export async function GET({ fetch }) {
 							<title>${post.title}</title>
 							<description>${post.description}</description>
 							<link>${config.url}/${post.slug}</link>
-							<guid isPermaLink="true">${config.url}/${post.slug}</guid>
+							<guid isPermaLink="true">${config.url}/b/${post.slug}</guid>
 							<pubDate>${new Date(post.date).toUTCString()}</pubDate>
 						</item>
 					`
