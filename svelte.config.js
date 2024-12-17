@@ -2,10 +2,15 @@ import { mdsvex, escapeSvelte } from 'mdsvex'
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { createHighlighter } from 'shiki'
+import remarkToc from 'remark-toc'
+import rehypeSlug from 'rehype-slug'
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
     extensions: ['.svx'],
+    layout: {
+        // _: './src/mdsvex.svelte'
+    },
     highlight: {
         highlighter: async (code, lang = 'text') => {
             const highlighter = await createHighlighter({
@@ -22,6 +27,8 @@ const mdsvexOptions = {
             return `{@html \`${html}\` }`
         }
     },
+    remarkPlugins: [[remarkToc, { tight: true }]],
+    rehypePlugins: [rehypeSlug]
 }
 
 /** @type {import('@sveltejs/kit').Config} */
