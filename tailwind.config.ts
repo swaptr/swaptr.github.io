@@ -12,16 +12,11 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            color: "hsl(var(--foreground))",
+            fontFamily: 'YourCustomFont, sans-serif !important',
             '*': {
               color: "hsl(var(--foreground))",
               margin: "0"
-            },
-            'h1, h2, h3, h4, h5, h6': {
-              textAlign: 'center',
-              marginTop: 4,
-              marginBottom: 4
-            },
+            }
           }
         }
       },

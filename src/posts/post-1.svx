@@ -19,3 +19,5 @@ function hello() {
 ```
 
 ![alt text](/favicon.png "Title")
+
+The official Tailwind CSS Typography plugin provides a set of prose classes you can use to add beautiful typographic defaults to any vanilla HTML you don’t control, like HTML rendered from Markdown, or pulled from a CMS.
