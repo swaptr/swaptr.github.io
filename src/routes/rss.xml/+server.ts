@@ -1,31 +1,13 @@
 import * as config from '$lib/config'
 import type { Post } from '$lib/types'
+import { getPosts } from '$lib/utils.js'
 
 export const prerender = true
 
 export async function GET({ fetch }) {
-    let posts: Post[] = []
-
-    const paths = import.meta.glob('/src/posts/*.svx', { eager: true })
-
-    for (const path in paths) {
-        const file = paths[path]
-        const slug = path.split('/').at(-1)?.replace('.svx', '')
-
-        if (file && typeof file === 'object' && 'metadata' in file && slug) {
-            const metadata = file.metadata as Omit<Post, 'slug'>
-            const post = { ...metadata, slug } satisfies Post
-            post.published && posts.push(post)
-        }
-    }
-
-    posts = posts.sort(
-        (first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
-    )
-
-    const headers = { 'Content-Type': 'application/xml' }
-
-    const xml = `
+	let posts: Post[] = getPosts()
+	const headers = { 'Content-Type': 'application/xml' }
+	const xml = `
 		<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 			<channel>
 				<title>${config.title}</title>
@@ -33,8 +15,8 @@ export async function GET({ fetch }) {
 				<link>${config.url}</link>
 				<atom:link href="${config.url}/rss.xml" rel="self" type="application/rss+xml"/>
 				${posts
-            .map(
-                (post) => `
+			.map(
+				(post) => `
 						<item>
 							<title>${post.title}</title>
 							<description>${post.description}</description>
@@ -43,11 +25,11 @@ export async function GET({ fetch }) {
 							<pubDate>${new Date(post.date).toUTCString()}</pubDate>
 						</item>
 					`
-            )
-            .join('')}
+			)
+			.join('')}
 			</channel>
 		</rss>
 	`.trim()
 
-    return new Response(xml, { headers })
+	return new Response(xml, { headers })
 }

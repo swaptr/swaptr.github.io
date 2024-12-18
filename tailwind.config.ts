@@ -12,7 +12,6 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            fontFamily: 'YourCustomFont, sans-serif !important',
             '*': {
               color: "hsl(var(--foreground))",
               margin: "0"

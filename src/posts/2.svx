@@ -2,7 +2,7 @@
 title: 'This is the second post'
 description: 'Description of post 1. This is the second post. This is the second post'
 date: '2023-11-16'
-categories: [a,b,c]
+tags: [b, c]
 published: true
 image: '/images/1.png'
 sponsor: 'Post 1'
