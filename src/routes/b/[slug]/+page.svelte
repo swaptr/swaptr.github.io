@@ -8,6 +8,6 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<article class="prose">
+<article class="article max-w-none">
 	<data.content />
 </article>
