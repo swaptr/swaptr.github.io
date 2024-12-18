@@ -1,3 +1,3 @@
-<div class="flex justify-between">
-	<a href="/" class="font-bold">Swapnil Tripathi</a>
+<div class="flex justify-between px-1">
+	<a href="/">Swapnil Tripathi</a>
 </div>

@@ -25,4 +25,8 @@
   body {
     @apply antialiased bg-background text-foreground;
   }
+
+  a {
+    @apply hover:opacity-75;
+  }
 }

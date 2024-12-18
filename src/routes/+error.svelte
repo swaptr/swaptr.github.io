@@ -2,4 +2,8 @@
 	import { page } from '$app/state';
 </script>
 
-<h1>{page.status}: {page.error?.message}</h1>
+<div class="flex h-full flex-col items-center justify-center">
+	<p>{page.status}</p>
+	<p>{page.error?.message}</p>
+	<a href="/">Home</a>
+</div>

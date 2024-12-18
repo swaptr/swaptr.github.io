@@ -16,6 +16,12 @@ export default {
             '*': {
               color: "hsl(var(--foreground))",
               margin: "0"
+            },
+            a: {
+              textDecoration: 'none'
+            },
+            'li::marker': {
+              color: "hsl(var(--foreground))"
             }
           }
         }

@@ -1,5 +1,5 @@
 ---
-title: 'Post 1'
+title: 'This is the second post'
 description: 'Description of post 1'
 date: '2023-11-16'
 categories: [a,b,c]
@@ -8,16 +8,29 @@ image: '/images/1.png'
 sponsor: 'Post 1'
 ---
 
-# This is a heading #1
-## This is a heading #2
-### This is a heading #3
+# H1
+## H2
+### H3
+**bold text**
 
-```js
-function hello() {
-    console.log("Hello world")
-}
-```
+*italicized text*
 
-![alt text](/favicon.png "Title")
+> blockquote
 
-The official Tailwind CSS Typography plugin provides a set of prose classes you can use to add beautiful typographic defaults to any vanilla HTML you don’t control, like HTML rendered from Markdown, or pulled from a CMS.
+
+1. First item
+2. Second item
+3. Third item
+
+
+- First item
+- Second item
+- Third item
+
+`code`
+
+---
+
+[title](https://www.example.com)
+
+![alt text](/favicon.png)

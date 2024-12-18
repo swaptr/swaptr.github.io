@@ -6,7 +6,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<Header />
-	<main class="flex flex-1 justify-center">
+	<main class="flex flex-1 justify-center p-1">
 		<div class="w-full max-w-5xl">
 			{@render children?.()}
 		</div>
