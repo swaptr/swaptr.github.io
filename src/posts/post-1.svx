@@ -1,6 +1,6 @@
 ---
 title: 'This is the second post'
-description: 'Description of post 1'
+description: 'Description of post 1. This is the second post. This is the second post'
 date: '2023-11-16'
 categories: [a,b,c]
 published: true
