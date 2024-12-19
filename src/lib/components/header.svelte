@@ -6,6 +6,7 @@
 	<a href="/" class="shrink-0 font-bold">Swapnil Tripathi</a>
 	<div class="flex flex-row items-center space-x-1">
 		<a href="/b">Blog</a>
+		<a href="/b/t">Tags</a>
 		<a href="/p">Projects</a>
 		<a href="/rss.xml">
 			<Rss class="h-4 w-4" />

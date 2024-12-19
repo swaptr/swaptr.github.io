@@ -8,27 +8,25 @@ export function formatDate(date: string, dateStyle: DateStyle = 'medium', locale
     return dateFormatter.format(dateToFormat)
 }
 
-export function getPosts() {
-    let posts: Post[] = []
+export function getPosts(tag?: string | null): Post[] {
+    const paths = import.meta.glob('/src/posts/*.svx', { eager: true });
 
-    const paths = import.meta.glob('/src/posts/*.svx', { eager: true })
+    const posts: Post[] = Object.entries(paths)
+        .map(([filePath, file]) => {
+            const slug = filePath.split('/').at(-1)?.replace('.svx', '');
+            if (file && typeof file === 'object' && 'metadata' in file && slug) {
+                const metadata = file.metadata as Omit<Post, 'slug'>;
+                return { ...metadata, slug } satisfies Post;
+            }
+            return null;
+        })
+        .filter((post): post is Post => post !== null && post.published)
+        .filter(post =>
+            !tag || post.tags?.includes(tag)
+        )
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-    for (const path in paths) {
-        const file = paths[path]
-        const slug = path.split('/').at(-1)?.replace('.svx', '')
-
-        if (file && typeof file === 'object' && 'metadata' in file && slug) {
-            const metadata = file.metadata as Omit<Post, 'slug'>
-            const post = { ...metadata, slug } satisfies Post
-            post.published && posts.push(post)
-        }
-    }
-
-    posts = posts.sort(
-        (first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
-    )
-
-    return posts
+    return posts;
 }
 
 export function getTagCounts(posts: Post[]): Record<string, number> {

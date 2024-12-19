@@ -12,9 +12,9 @@
 }
 
 :root {
-  --background: 0, 0%, 0%;
+  --background: 0, 0%, 5%;
   --foreground: 0, 0%, 100%;
-  --muted: 210 10% 50%;
+  --muted: 0 0% 50%;
 }
 
 @layer base {
@@ -24,9 +24,5 @@
 
   body {
     @apply antialiased bg-background text-foreground;
-  }
-
-  a {
-    @apply hover:opacity-75;
   }
 }
