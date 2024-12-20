@@ -3,7 +3,7 @@
 </script>
 
 <section class="divide-y divide-muted/50">
-	<div class="flex flex-row gap-4 p-4">
+	<div class="flex flex-row gap-x-4 p-4">
 		<img
 			alt="The project logo"
 			src="https://avatars.githubusercontent.com/u/83858160?v=4"
