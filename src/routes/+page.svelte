@@ -7,7 +7,9 @@
 		<img
 			alt="The project logo"
 			src="https://avatars.githubusercontent.com/u/83858160?v=4"
-			class="size-16 rounded-full"
+			class="aspect-square size-16 rounded-full"
+			height="64"
+			width="64"
 		/>
 		<div class="flex flex-col gap-2">
 			<p class="line-clamp-4">{description}</p>
