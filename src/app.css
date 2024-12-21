@@ -24,4 +24,9 @@
   body {
     @apply antialiased bg-background text-foreground;
   }
+
+  ::selection {
+    color: hsl(var(--background));
+    background: hsl(var(--foreground));
+  }
 }
