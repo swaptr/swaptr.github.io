@@ -9,9 +9,9 @@
 			src="https://avatars.githubusercontent.com/u/83858160?v=4"
 			class="size-16 rounded-full"
 		/>
-		<div class="flex flex-col">
+		<div class="flex flex-col gap-2">
 			<p class="line-clamp-4">{description}</p>
-			<div class="flex flex-row flex-wrap gap-x-2">
+			<div class="flex flex-row flex-wrap gap-x-2 text-sm">
 				{#each links as link}
 					<a href={link.value} id={link.id} target="_blank">
 						<p>{link.label}↗</p>
